@@ -2,9 +2,7 @@
  * 
  */
 package es.Studium.Trimestre1.Practica1;
-
 import java.util.Scanner;
-
 /**
  * @author alvaro
  *
@@ -40,15 +38,15 @@ public class formatoHora {
 				System.out.println("Error, debe introducir un formato valido.");
 			}
 		}
-		else if ((hor>=12)&(hor<25))
+		else if ((hor>12)&(hor<24))
 		{
 			if((min<=59)&(min>0))
 			{
-				System.out.println(hor+":"+min+" pm");
+				System.out.println((hor-12)+":"+min+" pm");
 			}
 			else if (min==0)
 			{
-				System.out.println(hor+":"+min+"0 pm");
+				System.out.println((hor-12)+":"+min+"0 pm");
 			}
 			else
 			{
@@ -60,4 +58,5 @@ public class formatoHora {
 			System.out.println("Error, debe introducir un formato valido.");
 		}
 	}
+
 }
