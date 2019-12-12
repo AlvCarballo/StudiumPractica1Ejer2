@@ -24,19 +24,43 @@ public class formatoHora {
 		teclado.close();
 		String[] hora1 = hora.split(":");
 		int hor=Integer.parseInt (hora1[0]);
-		String min=(hora1[1]);
+		int min=Integer.parseInt (hora1[1]);
 		if (hor<=12)
 		{
-			System.out.println(hor+":"+min+" am");
+			if((min<=59)&(min>0))
+			{
+				System.out.println(hor+":"+min+" am");
+			}
+			else if (min==0)
+			{
+				System.out.println(hor+":"+min+"0 am");
+			}
+			else
+			{
+				System.out.println("Error, debe introducir un formato valido.");
+			}
 		}
 		else if ((hor>=12)&(hor<25))
 		{
-			System.out.println((hor-12)+":"+min+" pm");
+			if((min<=59)&(min>0))
+			{
+				System.out.println(hor+":"+min+" pm");
+			}
+			else if (min==0)
+			{
+				System.out.println(hor+":"+min+"0 pm");
+			}
+			else
+			{
+				System.out.println("Error, debe introducir un formato valido.");
+			}
 		}
 		else
 		{
 			System.out.println("Error, debe introducir un formato valido.");
 		}
 	}
+
+}
 
 }
