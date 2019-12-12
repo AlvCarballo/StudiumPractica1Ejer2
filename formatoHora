@@ -60,7 +60,4 @@ public class formatoHora {
 			System.out.println("Error, debe introducir un formato valido.");
 		}
 	}
-
-}
-
 }
